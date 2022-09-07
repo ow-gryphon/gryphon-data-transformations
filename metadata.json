@@ -1,13 +1,13 @@
 {
-    "display_name": "",
-    "command": "",
-    "dependencies": [],
+    "display_name": "Data Transformations",
+    "command": "generate",
+    "dependencies": ["numpy", "pandas", "scikit-learn", "scipy", "matplotlib", "python-dateutil", "jupyter"],
 
-    "keywords": [],
-    "methodology": [],
+    "keywords": ["data", "transformations", "scaling", "data cleaning", "preprocessing"],
+    "methodology": ["Data transformations"],
     "topic": [],
 
-    "description": "",
-    "author": "",
-    "author_email": ""
+    "description": "Provides a range of transformations for cleaning and preprocessing data. This includes transformations for working with datetime data, converting datatypes, scaling numerical data, and categorical data encoding. ",
+    "author": "Daniel Uken",
+    "author_email": "daniel.uken@oliverwyman.com"
 }

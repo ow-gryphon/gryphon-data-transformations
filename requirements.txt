@@ -1,1 +1,8 @@
 pre-commit
+numpy
+pandas
+missingno
+jupyter
+matplotlib
+ipython
+scipy

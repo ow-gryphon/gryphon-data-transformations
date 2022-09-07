@@ -11,15 +11,19 @@ with open('metadata.json') as fr:
     metadata = json.load(fr)
 
 setuptools.setup(
-    name="",  # Name of the repository
+    name="gryphon-data-transformations",  # Name of the repository
     version="0.0.1",
-    author=metadata.get("author", ""),
-    author_email=metadata.get("author_email", ""),
-    description=metadata.get("description", ""),
+    author="Daniel Uken",
+    author_email="daniel.uken@oliverwyman.com",
+    description="Data transformations for general data cleaning",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="",  # Repository URL or externally maintained page
     packages=setuptools.find_packages(),
-    python_requires='>=3.6',
+    classifiers=[
+        "Programming Language :: Python :: 3.7",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.7',
     install_requires=requirements,
 )
