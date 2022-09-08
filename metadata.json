@@ -4,7 +4,7 @@
     "dependencies": ["numpy", "pandas", "scikit-learn", "scipy", "matplotlib", "python-dateutil", "jupyter"],
 
     "keywords": ["data", "transformations", "scaling", "data cleaning", "preprocessing"],
-    "methodology": ["Data transformations"],
+    "methodology": ["Data Exploration"],
     "topic": [],
 
     "description": "Provides a range of transformations for cleaning and preprocessing data. This includes transformations for working with datetime data, converting datatypes, scaling numerical data, and categorical data encoding. ",
