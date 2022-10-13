@@ -12,7 +12,7 @@ with open('metadata.json') as fr:
 
 setuptools.setup(
     name="gryphon-data-transformations",  # Name of the repository
-    version="0.0.4",
+    version="0.0.5",
     author="Daniel Uken",
     author_email="daniel.uken@oliverwyman.com",
     description="Data transformations for general data cleaning",
