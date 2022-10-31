@@ -1,5 +1,5 @@
 {
-    "display_name": "Data Transformations",
+    "display_name": "Data transformations",
     "command": "generate",
     "dependencies": ["numpy", "pandas", "scikit-learn", "scipy", "matplotlib", "python-dateutil", "jupyter"],
 
@@ -9,5 +9,6 @@
 
     "description": "Provides a range of transformations for cleaning and preprocessing data. This includes transformations for working with datetime data, converting datatypes, scaling numerical data, and categorical data encoding. ",
     "author": "Daniel Uken",
-    "author_email": "daniel.uken@oliverwyman.com"
+    "author_email": "daniel.uken@oliverwyman.com",
+    "read_more_link": "https://github.com/ow-gryphon/gryphon-data-transformations"
 }
