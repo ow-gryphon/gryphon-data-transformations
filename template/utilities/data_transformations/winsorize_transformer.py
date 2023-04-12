@@ -3,12 +3,12 @@ import warnings
 import numpy as np
 import pandas as pd
 import scipy
-from sklearn.base import (
-    BaseEstimator,
-    TransformerMixin,
-    _OneToOneFeatureMixin,
-    _ClassNamePrefixFeaturesOutMixin,
-)
+from sklearn.base import BaseEstimator, TransformerMixin
+try:
+    from sklearn.base import _OneToOneFeatureMixin as OneToOneFeatureMixin
+    from sklearn.base import _ClassNamePrefixFeaturesOutMixin as ClassNamePrefixFeaturesOutMixin
+except ImportError:
+    from sklearn.base import OneToOneFeatureMixin, ClassNamePrefixFeaturesOutMixin
 from sklearn.utils.validation import (
     check_is_fitted,
     check_random_state,
@@ -17,7 +17,7 @@ from sklearn.utils.validation import (
 )
 
 
-class WinsorizationTransformer(_OneToOneFeatureMixin, TransformerMixin, BaseEstimator):
+class WinsorizationTransformer(OneToOneFeatureMixin, TransformerMixin, BaseEstimator):
     """
     Winsorize features by replacing values outside the specified percentiles with those percentiles.
 
@@ -184,7 +184,11 @@ class WinsorizationTransformer(_OneToOneFeatureMixin, TransformerMixin, BaseEsti
         n = a.shape[0] 
         idx = a.argsort()
           
-        contains_nan = scipy.stats.stats._contains_nan(a, self.nan_policy)
+        # _contains_nan function was moved in SciPy v1.10.0
+        try: 
+            contains_nan = scipy.stats.stats._contains_nan(a, self.nan_policy)
+        except AttributeError:
+            contains_nan = scipy.stats._stats_py._contains_nan(a, self.nan_policy)
 
         if contains_nan[0]:
             nan_count = np.count_nonzero(np.isnan(a))
