@@ -1,12 +1,7 @@
 {
     "display_name": "Data transformations",
     "command": "generate",
-    "dependencies": ["notebook==6.5.4", 
-	             "qtconsole==5.4.2", 
-		     "jupyter-console==6.6.3",
-		     "nbconvert==7.3.1",
-		     "ipykernel==6.22.0",
-		     "ipywidgets==8.0.6",
+    "dependencies": ["jupyter",
 		     "numpy", 
 		     "pandas", 
 		     "scikit-learn", 
